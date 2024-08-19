@@ -1,0 +1,71 @@
+{
+	"info": {
+		"_postman_id": "0c37e3d3-4a96-4677-b054-28cc23f27a0f",
+		"name": "Spring2.5-JAP-Transaction-Auditlog",
+		"description": "Check all APIs in Swagger:\n\n[http://localhost:8080/swagger-ui.html#/](http://localhost:8080/swagger-ui.html#/)",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33936986"
+	},
+	"item": [
+		{
+			"name": "Book Flight (Success)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n \"passengerInfo\": {\r\n  \"name\": \"Alex\",\r\n  \"email\": \"alex@gmail.com\",\r\n  \"source\": \"Dubai\",\r\n  \"destination\": \"Toronto\",\r\n  \"travelDate\": \"02-09-2024\",\r\n  \"pickupTime\": \"3 PM\",\r\n  \"arrivalTime\": \"10 am 03-09-2024\",\r\n  \"fare\": 6000.0\r\n },\r\n \"paymentInfo\": {\r\n    \"accountNo\": \"acc1\",\r\n    \"amount\": 12000.00,\r\n    \"cardType\": \"Master Card\",\r\n    \"passengerId\": 125800\r\n  }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9090/book/v1/flightticket",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"book",
+						"v1",
+						"flightticket"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Flight Booking (Rejected)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n \"passengerInfo\": {\r\n  \"name\": \"Anna33\",\r\n  \"email\": \"anna33@hotmail.com\",\r\n  \"source\": \"Dubai\",\r\n  \"destination\": \"Toronto\",\r\n  \"travelDate\": \"02-09-2024\",\r\n  \"pickupTime\": \"3 PM\",\r\n  \"arrivalTime\": \"10 am 03-09-2024\",\r\n  \"fare\": 14050.0\r\n },\r\n \"paymentInfo\": {\r\n    \"accountNo\": \"acc1\",\r\n    \"amount\": 12000.00,\r\n    \"cardType\": \"Master Card\",\r\n    \"passengerId\": 125800\r\n  }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9090/book/v1/flightticket",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"book",
+						"v1",
+						"flightticket"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
